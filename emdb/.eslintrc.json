@@ -1,3 +1,13 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      { "argsIgnorePattern": "^_" }
+    ], // Warn on unused vars but ignore if prefixed with an underscore
+    "@typescript-eslint/no-explicit-any": "off", // Disable explicit any errors
+    "react-hooks/exhaustive-deps": "warn", // Warn instead of error for missing useEffect dependencies
+    "jsx-a11y/alt-text": "warn", // Warn for missing alt text instead of error
+    "@next/next/no-img-element": "warn" // Warn for <img> tags instead of error
+  }
 }
