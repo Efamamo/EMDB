@@ -16,7 +16,7 @@ export default function Header() {
         <Link
           style={{ color: 'white' }}
           href="/"
-          className="text-2xl font-bold bg-blue-500 py-1 px-2 rounded-lg"
+          className="text-2xl font-semibold bg-blue-500 py-1 px-2 rounded-lg"
         >
           EMDB
         </Link>

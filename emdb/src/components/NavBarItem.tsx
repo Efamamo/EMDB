@@ -11,12 +11,12 @@ export default function NavBarItem({ title, link }: NavBarItemProps) {
   return (
     <div>
       <Link
-        className={`hover:text-amber-600 font-semibold ${
+        className={`hover:text-blue-600 font-semibold ${
           genre === link
-            ? 'underline underline-offset-8 decoration-amber-500 rounded-lg'
+            ? 'underline underline-offset-8 decoration-blue-600 rounded-lg'
             : ''
         }`}
-        href={`/?genre=${link}` }
+        href={`/?genre=${link}`}
       >
         {title}
       </Link>

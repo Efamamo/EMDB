@@ -2,8 +2,19 @@
 import Loading from '@/app/loading';
 import { useEffect, useState } from 'react';
 
+interface Movie {
+  backdrop_path?: string;
+  poster_path: string;
+  name: string;
+  title: string;
+  overview: string;
+  release_date: string;
+  first_air_date: string;
+  vote_count: number;
+}
+
 export default function Movie({ params }: { params: { id: string } }) {
-  const [movie, setData] = useState<any>();
+  const [movie, setData] = useState<Movie>();
   const API_KEY = process.env.NEXT_PUBLIC_API_URL;
 
   useEffect(() => {

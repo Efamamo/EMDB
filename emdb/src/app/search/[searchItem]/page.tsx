@@ -4,8 +4,19 @@ import { useEffect, useState } from 'react';
 import Results from '@/components/Results';
 import Loading from '@/app/loading';
 
+interface Movie {
+  backdrop_path?: string;
+  poster_path: string;
+  name: string;
+  title: string;
+  overview: string;
+  release_date: string;
+  first_air_date: string;
+  vote_count: number;
+}
+
 export default function Search({ params }: { params: { searchItem: string } }) {
-  const [data, setMovie] = useState<any>(null);
+  const [data, setMovie] = useState<{ results: Movie[] }>();
   const [loading, setLoading] = useState(false);
 
   const searchTerm = params.searchItem; // Fixed typo here

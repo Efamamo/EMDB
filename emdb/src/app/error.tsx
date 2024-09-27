@@ -1,5 +1,5 @@
 'use client';
-export default function error({
+export default function ErrorBoundary({
   error,
   reset,
 }: {
