@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Menu from './Menu';
 import { AiFillHome } from 'react-icons/ai';
 import { BsFillInfoCircleFill } from 'react-icons/bs';
+import ThemeSwitch from './ThemeSwitch';
 
 export default function Header() {
   return (
@@ -10,7 +11,8 @@ export default function Header() {
         <Menu title="Home" to="/" Icon={AiFillHome} />
         <Menu title="About" to="/about" Icon={BsFillInfoCircleFill} />
       </div>
-      <div>
+      <div className="flex items-center  gap-4">
+        <ThemeSwitch />
         <Link
           href="/"
           className="text-2xl font-bold bg-amber-300 py-1 px-2 rounded-lg"
