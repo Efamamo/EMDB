@@ -1,10 +1,10 @@
+import Card from './Card';
+
 export default function Results({ results }: { results: any[] }) {
   return (
-    <div>
+    <div className="sm:grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 max-w-6xl mx-auto py-4">
       {results.map((result) => (
-        <div key={result.id}>
-          <h2>{result.title}</h2>
-        </div>
+        <Card result={result} />
       ))}
     </div>
   );
