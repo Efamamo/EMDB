@@ -4,9 +4,20 @@ import { useSearchParams } from 'next/navigation';
 import Results from '@/components/Results';
 import Loading from './loading';
 
+interface Movie {
+  backdrop_path?: string;
+  poster_path: string;
+  name: string;
+  title: string;
+  overview: string;
+  release_date: string;
+  first_air_date: string;
+  vote_count: number;
+}
+
 export default function Home() {
   const searchParams = useSearchParams();
-  const [data, setData] = useState<any>([]);
+  const [data, setData] = useState<{ results: Movie[] }>();
   const [loading, setLoading] = useState(true);
   const genre = searchParams.get('genre') || 'fetchTrending';
   const API_KEY = process.env.NEXT_PUBLIC_API_URL;
