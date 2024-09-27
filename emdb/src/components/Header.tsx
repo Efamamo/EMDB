@@ -14,8 +14,9 @@ export default function Header() {
       <div className="flex items-center  gap-4">
         <ThemeSwitch />
         <Link
+          style={{ color: 'white' }}
           href="/"
-          className="text-2xl font-bold bg-amber-300 py-1 px-2 rounded-lg"
+          className="text-2xl font-bold bg-blue-500 py-1 px-2 rounded-lg"
         >
           EMDB
         </Link>

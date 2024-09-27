@@ -18,6 +18,9 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: 'EMDB',
+  icons: {
+    icon: '/favicon.png', // path to your favicon inside the public folder
+  },
 };
 
 export default function RootLayout({
