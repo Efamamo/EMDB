@@ -2,8 +2,9 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Results from '@/components/Results';
+import Loading from './loading';
 
-export default function MyComponent() {
+export default function Home() {
   const searchParams = useSearchParams();
   const [data, setData] = useState<any>([]);
   const [loading, setLoading] = useState(true);
@@ -34,7 +35,7 @@ export default function MyComponent() {
     fetchData();
   }, [genre]); // Fetch data whenever myParam changes
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <Loading />;
 
   return (
     <div>

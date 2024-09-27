@@ -1,4 +1,5 @@
 'use client';
+import Loading from '@/app/loading';
 import { useEffect, useState } from 'react';
 
 export default function Movie({ params }: { params: { id: string } }) {
@@ -22,8 +23,6 @@ export default function Movie({ params }: { params: { id: string } }) {
     };
     fetchData();
   }, []);
-
-  console.log(movie);
 
   if (movie) {
     return (
@@ -56,5 +55,5 @@ export default function Movie({ params }: { params: { id: string } }) {
       </div>
     );
   }
-  return <div></div>;
+  return <div>{<Loading />}</div>;
 }

@@ -4,6 +4,7 @@ import './globals.css';
 import Header from '@/components/Header';
 import Providers from './Providers';
 import NavBar from '@/components/NavBar';
+import SearchBox from '@/components/SearchBox';
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
   variable: '--font-geist-sans',
@@ -33,6 +34,7 @@ export default function RootLayout({
         <Providers>
           <Header />
           <NavBar />
+          <SearchBox />
           {children}
         </Providers>
       </body>
